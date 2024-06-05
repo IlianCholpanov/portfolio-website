@@ -1,4 +1,9 @@
+"use client";
+/* eslint-disable react/jsx-key */
+
+import { useRef } from "react";
 import ProjectCard from "./ProjectCard";
+import { motion, useInView } from "framer-motion";
 
 const projectsContent = [
   {
@@ -34,25 +39,41 @@ const projectsContent = [
 ];
 
 function ProjectSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const cardVariants = {
+    initial: { y: 50, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+
   return (
-    <>
+    <section>
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {projectsContent.map((project) => (
-          <ProjectCard
-            key={project.id}
-            title={project.title}
-            description={project.description}
-            imgUrl={project.image}
-            tags={project.tag}
-            liveDemo={project.liveDemo}
-            sourceCode={project.sourceCode}
-          />
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {projectsContent.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.6 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              tags={project}
+              liveDemo={project.liveDemo}
+              sourceCode={project.sourceCode}
+            />
+          </motion.li>
         ))}
-      </div>
-    </>
+      </ul>
+    </section>
   );
 }
 
