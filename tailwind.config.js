@@ -22,5 +22,4 @@ module.exports = {
       tertiary: "#F7BB97",
     },
   },
-  plugins: [],
 };
