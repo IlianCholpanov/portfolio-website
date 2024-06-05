@@ -1,3 +1,13 @@
+"use client";
+import dynamic from "next/dynamic";
+
+const AnimatedNumbers = dynamic(
+  () => {
+    return import("react-animated-numbers");
+  },
+  { ssr: false }
+);
+
 const achievmentsList = [
   {
     metric: "Projects",
@@ -5,7 +15,8 @@ const achievmentsList = [
   },
   {
     metric: "Commits",
-    value: "600+",
+    value: "600",
+    postfix: "+",
   },
   {
     metric: "Years of experience",
@@ -23,8 +34,21 @@ function AchievmentsSection() {
               key={index}
               className="flex flex-col items-center justify-center mx-4"
             >
-              <h2 className="text-white text-4xl font-bold">
-                {achievment.value}
+              <h2 className="text-white text-4xl font-bold flex flex-row">
+                <AnimatedNumbers
+                  includeComma
+                  animateToNumber={parseInt(achievment.value)}
+                  locale="eu-US"
+                  className="text-white text-4xl font-bold"
+                  configs={(_, index) => {
+                    return {
+                      mass: 1,
+                      friction: 100,
+                      tension: 140 * (index + 1),
+                    };
+                  }}
+                />
+                {achievment.postfix}
               </h2>
               <p className="text-[#ADB7BE] text-base">{achievment.metric}</p>
             </div>
