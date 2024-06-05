@@ -41,7 +41,7 @@ export default function SendEmailButton({ status }) {
     <button
       type="submit"
       disabled={status === "success"}
-      className="bg-purple-500 hover:bg-purple-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+      className="bg-secondary hover:bg-secondary text-white font-medium py-2.5 px-5 rounded-lg w-full"
     >
       {renderButtonContent()}
     </button>
