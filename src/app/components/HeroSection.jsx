@@ -3,10 +3,11 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 
 function HeroSection() {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-16" id="hero-section">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -27,13 +28,18 @@ function HeroSection() {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta fuga
-            aliquam nihil excepturi rerum nostrum.
+            Motivated and enthusiastic web developer turning ideas into
+            user-friendly websites, eager to grow my skills.
           </p>
           <div>
-            <button className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-tertiary hover:bg-slate-200 text-white">
+            <ScrollLink
+              to="contact"
+              offset={-80}
+              smooth={true}
+              className="px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary via-secondary to-tertiary hover:bg-slate-200 text-white cursor-pointer"
+            >
               Contact me
-            </button>
+            </ScrollLink>
             {/* <button className="px-1 py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-secondary via-primary to-tertiary hover:bg-slate-800 text-white mt-3 ">
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
                 Download CV
