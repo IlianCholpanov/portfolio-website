@@ -33,7 +33,7 @@ const projectsContent = [
       "Simple way of allowing customers to order food from a fast food restourant. Fast-React-Pizza was build using Vite React practicing ReactRouter and Tailwind",
     image: "/images/projects/3.png",
     tag: ["All", "Web 2.0"],
-    liveDemo: "",
+    liveDemo: "https://fast-react-pizza-liart-tau.vercel.app/",
     sourceCode: "https://github.com/IlianCholpanov/Fast-react-pizza",
   },
 ];
