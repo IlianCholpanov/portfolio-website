@@ -10,9 +10,11 @@ const tabContent = [
     content: (
       <ul className="list-disc pl-2 grid grid-cols-2">
         <li>React</li>
+        <li>Next.js</li>
         <li>Supabase</li>
         <li>Redux</li>
         <li>Tailwind</li>
+        <li>React Query</li>
         <li>JavaScript</li>
         <li>Git & GitHub</li>
       </ul>
@@ -23,9 +25,10 @@ const tabContent = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>The Ultimate React Course 2024: React, Redux & More - Udemy</li>
+        <li>Paisii Hilendarski University of Plovdiv | 2024 - 2028</li>
+        <li>Js Web Development - SoftUni Academy | 2022 - 2024</li>
+        <li>The Ultimate React Course 2025: React, Redux & More - Udemy</li>
         <li>Build Responsive Real-World Websites with HTML and CSS - Udemy</li>
-        <li>Js Web Development - SoftUni Academy</li>
       </ul>
     ),
   },
@@ -34,7 +37,7 @@ const tabContent = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>The Ultimate React Course 2024: React, Redux- Udemy</li>
+        <li>The Ultimate React Course 2025: React, Redux- Udemy</li>
         <li>Build Responsive Real-World Websites with HTML and CSS - Udemy</li>
         <li>JS Applications - SoftUni</li>
         <li>JS Advanced - SoftUni</li>

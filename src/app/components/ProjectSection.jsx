@@ -36,6 +36,16 @@ const projectsContent = [
     liveDemo: "https://fast-react-pizza-liart-tau.vercel.app/",
     sourceCode: "https://github.com/IlianCholpanov/Fast-react-pizza",
   },
+  {
+    id: 4,
+    title: "Evernorth Lodge",
+    description:
+      "Evernorth Lodge is a web application designed to provide a seamless and interactive user experience, leveraging powerful tools like Supabase for backend services and React Query for data fetching and caching.",
+    image: "/images/projects/4.png",
+    tag: ["All", "Web 2.0"],
+    liveDemo: "https://evernorth-lodge.vercel.app/",
+    sourceCode: "https://github.com/IlianCholpanov/evernorth-lodge",
+  },
 ];
 
 function ProjectSection() {
